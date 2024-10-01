@@ -138,12 +138,14 @@ export const ManufacturingBox = styled('div')(() => ({
 }));
 
 export const Technick = styled('div')(() => ({
-    marginBottom: 30,
+  marginBottom: 30,
   '& h2': {
     textAlign: 'center',
     marginTop: 60,
     color: '#42464e',
     marginBottom: 10,
+    marginLeft: 10,
+    marginRight: 10,
   },
   p: {
     backgroundColor: '#f3f5f7',
@@ -154,14 +156,14 @@ export const Technick = styled('div')(() => ({
     },
   },
   '@media(max-width: 340px)': {
-    h2:{
-        marginTop: 70
-    }
+    h2: {
+      marginTop: 80,
+    },
   },
   '@media(max-width: 320px)': {
-    h2:{
-        marginTop: 100
-    }
+    h2: {
+      marginTop: 110,
+    },
   },
 }));
 
