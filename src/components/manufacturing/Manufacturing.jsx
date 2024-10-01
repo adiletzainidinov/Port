@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import ImgWhatsap from '../../assets/Изображение_WhatsApp_2024-09-30_в_10.50.40_10985b31-removebg-preview.png';
+import ImgWhatsap from '../../assets/whatsapp.png';
 import { FcTodoList } from 'react-icons/fc';
 
 const Manufacturing = () => {
