@@ -404,6 +404,7 @@ export const OrderNowBottom = styled('div')(() => ({
     textAlign: 'center',
     margin: '0 10px',
     marginBottom: 10,
+    color: '#42464e',
   },
   '& p': {
     textAlign: 'center',
