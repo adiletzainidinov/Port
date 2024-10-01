@@ -17,8 +17,15 @@ const MainContent = () => {
               }}
             >
               <div style={{ position: 'relative' }}>
-                <MdShield fontSize="50px" color="#14356c" />
-                <GiCheckMark className="checkMark" />
+                <MdShield
+                  fontSize="50px"
+                  color="#14356c"
+                  style={{ marginRight: 10 }}
+                />
+                <GiCheckMark
+                  className="checkMark"
+                  style={{ marginRight: 10 }}
+                />
               </div>
               <p>
                 УДОБЕН И <br /> БЕЗОПАСЕН
@@ -63,8 +70,6 @@ export const StyledBox = styled('div')(() => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '500px',
-  paddingLeft: 10,
-  paddingRight: 10,
 }));
 
 export const BoxIconCheck = styled('div')(() => ({
@@ -83,6 +88,7 @@ export const BoxIconCheck = styled('div')(() => ({
     fontWeight: 'bold',
     fontSize: 14,
     textAlign: 'center',
+    marginRight: 10,
   },
 }));
 
@@ -114,38 +120,38 @@ export const Present = styled('div')(() => ({
   '@media (max-width: 450px)': {
     '& .idea': {
       left: 20,
-      top: -200
+      top: -200,
     },
     '& .gifPresentIcon': {
-        marginTop: 100,
-      },
+      marginTop: 100,
+    },
   },
   '@media (max-width: 430px)': {
     '& .idea': {
       left: 0,
-      top: -220
+      top: -220,
     },
     '& .gifPresentIcon': {
-        marginTop: 120,
-      },
+      marginTop: 120,
+    },
   },
   '@media (max-width: 390px)': {
     '& .idea': {
       left: -10,
-      top: -250
+      top: -250,
     },
     '& .gifPresentIcon': {
-        marginTop: 160,
-      },
+      marginTop: 160,
+    },
   },
   '@media (max-width: 320px)': {
     '& .idea': {
       left: -10,
-      top: -250
+      top: -250,
     },
     '& .gifPresentIcon': {
-        marginTop: 160,
-      },
+      marginTop: 160,
+    },
   },
 }));
 
@@ -166,17 +172,15 @@ export const Avaria = styled('div')(() => ({
   '@media (max-width: 390px)': {
     marginTop: 150,
     '& h3': {
-        fontSize: 26
+      fontSize: 26,
     },
-    '& p': {
-      },
+    '& p': {},
   },
   '@media (max-width: 320px)': {
     marginTop: 150,
     '& h3': {
-        fontSize: 22
+      fontSize: 22,
     },
-    '& p': {
-      },
+    '& p': {},
   },
 }));

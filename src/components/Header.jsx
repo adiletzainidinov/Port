@@ -37,11 +37,13 @@ export const HeaderBox = styled('div')(() => ({
   color: 'white',
   display: 'flex',
   justifyContent: 'center',
-  padding: '10px 10px',
+  padding: '10px 0px',
   '& h1': {
     fontSize: 30,
     fontWeight: 500,
     letterSpacing: '3px',
+    marginLeft: 10,
+    marginRight: 10,
   },
   '@media (max-width: 420px)': {
     '& h1': {
