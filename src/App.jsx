@@ -6,6 +6,8 @@ import PortableCarStarter from './components/portable_car_starter/PortableCarSta
 import Power from './components/power/Power';
 import Equipment from './components/equipment/Equipment';
 import Support from './components/support/Support';
+import Delivery from './components/delivery/Delivery';
+import DeliveryBottom from './components/delivery/DeliveryBottom';
 
 const App = () => {
   return (
@@ -18,6 +20,8 @@ const App = () => {
       <Manufacturing />
       <Support />
       <Equipment />
+      <Delivery/>
+      <DeliveryBottom/>
     </>
   );
 };
