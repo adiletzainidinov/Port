@@ -28,15 +28,13 @@ const Footer = () => {
     <Container>
       <StyledBox>
         <h2>На нашем сайте действует:</h2>
-        <a href="#" onClick={handleIsWebsitePrivacyPolicy}>
+        <p onClick={handleIsWebsitePrivacyPolicy}>
           Политика конфиденциальности сайта
-        </a>
-        <a href="#" onClick={handleIsUserAgreementData}>
-          Пользовательское соглашение
-        </a>
-        <a href="#" onClick={handleisForReturningAndExchangingGoods}>
+        </p>
+        <p onClick={handleIsUserAgreementData}>Пользовательское соглашение</p>
+        <p onClick={handleisForReturningAndExchangingGoods}>
           Условия возврата и обмена товара
-        </a>
+        </p>
         {isWebsitePrivacyPolicy && <h4>{websitePrivacyPolicyData}</h4>}
         {isUserAgreementData && <h4>{userAgreementData}</h4>}
         {isForReturningAndExchangingGoodsData && (
@@ -66,8 +64,10 @@ export const StyledBox = styled('div')(() => ({
   h2: {
     marginBottom: 20,
   },
-  a: {
+  p: {
     color: '#42464e',
-    marginBottom: 10
+    cursor: 'pointer',
+    marginBottom: 10,
+    borderBottom: '1px solid #42464e'
   },
 }));

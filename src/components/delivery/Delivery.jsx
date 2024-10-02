@@ -69,10 +69,10 @@ export const StyledBox = styled('div')(() => ({
   padding: 20,
   paddingTop: 45,
   '@media (max-width: 390px)': {
-    marginTop: 340,
+    marginTop: 360,
   },
   '@media (max-width: 345px)': {
-    marginTop: 380,
+    marginTop: 420,
   },
 }));
 
