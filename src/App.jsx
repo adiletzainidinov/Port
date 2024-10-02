@@ -4,6 +4,7 @@ import Manufacturing from './components/manufacturing/Manufacturing';
 import Order from './components/Order';
 import PortableCarStarter from './components/portable_car_starter/PortableCarStarter';
 import Power from './components/power/Power';
+import Equipment from './components/equipment/Equipment';
 import Support from './components/support/Support';
 
 const App = () => {
@@ -15,7 +16,8 @@ const App = () => {
       <PortableCarStarter />
       <Power />
       <Manufacturing />
-      <Support/>
+      <Support />
+      <Equipment />
     </>
   );
 };

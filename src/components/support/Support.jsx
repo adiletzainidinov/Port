@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
-import ImgCnopka from '../../assets/photo_2024-10-01_18-04-54-removebg-preview.png';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 import Button from '../../shared/UI/button/Button';
+import sam from '../../assets/сам-removebg-preview.png';
 
 const TechnickData = [
   {
@@ -54,7 +54,7 @@ const Support = () => {
             <p>Удобство использования:</p>
           </ManufacturingBox>
           <ImgManufacturing>
-            <img src={ImgCnopka} />
+            <img src={sam} />
           </ImgManufacturing>
           <Technick>
             <h2>ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</h2>
@@ -101,6 +101,15 @@ const StyledBox = styled('div')(() => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   marginTop: 300,
+  '@media(max-width: 440px)': {
+    height: '610px',
+  },
+  '@media(max-width: 390px)': {
+    height: '570px',
+  },
+  '@media(max-width: 340px)': {
+    height: '530px',
+  },
 }));
 
 export const ImgManufacturing = styled('div')(() => ({
@@ -141,7 +150,7 @@ export const Technick = styled('div')(() => ({
   marginBottom: 30,
   '& h2': {
     textAlign: 'center',
-    marginTop: 60,
+    marginTop: 100,
     color: '#42464e',
     marginBottom: 10,
     marginLeft: 10,
@@ -153,16 +162,6 @@ export const Technick = styled('div')(() => ({
     span: {
       fontWeight: 'bold',
       marginLeft: 8,
-    },
-  },
-  '@media(max-width: 340px)': {
-    h2: {
-      marginTop: 80,
-    },
-  },
-  '@media(max-width: 320px)': {
-    h2: {
-      marginTop: 110,
     },
   },
 }));
