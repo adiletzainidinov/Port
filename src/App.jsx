@@ -10,6 +10,7 @@ import Delivery from './components/delivery/Delivery';
 import DeliveryBottom from './components/delivery/DeliveryBottom';
 import BidFooter from './components/bid-footer/BidFooter';
 import Footer from './components/footer/Footer';
+import Admin from './components/admin/Admin';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
       <MainContent />
       <BidFooter />
       <Footer />
+      <Admin/>
     </>
   );
 };
