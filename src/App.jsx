@@ -11,8 +11,10 @@ import DeliveryBottom from './components/delivery/DeliveryBottom';
 import BidFooter from './components/bid-footer/BidFooter';
 import Footer from './components/footer/Footer';
 import Admin from './components/admin/Admin';
+import { useSelector } from 'react-redux';
 
 const App = () => {
+  const { isLogin } = useSelector((s) => s.portative);
   return (
     <>
       <Header />
@@ -29,7 +31,7 @@ const App = () => {
       <MainContent />
       <BidFooter />
       <Footer />
-      <Admin/>
+      {isLogin && <Admin />}
     </>
   );
 };

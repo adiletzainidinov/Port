@@ -49,10 +49,12 @@ const Footer = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     if (name === 'Adilet' && password === '5365') {
       dispatch(isLoginTrue());
-      handleClose(); 
+      handleClose();
+      setName('');
+      setPassword('');
     }
   };
 
