@@ -15,21 +15,23 @@ import { useSelector } from 'react-redux';
 
 const App = () => {
   const { isLogin } = useSelector((s) => s.portative);
+  const id = 'id'
+
   return (
     <>
       <Header />
       <MainContent />
-      <Order />
+      <Order id={id} />
       <PortableCarStarter />
       <Power />
       <Manufacturing />
-      <Support />
+      <Support id={id} />
       <Equipment />
       <Delivery />
       <DeliveryBottom />
       <Header />
       <MainContent />
-      <BidFooter />
+      <BidFooter id={id} />
       <Footer />
       {isLogin && <Admin />}
     </>

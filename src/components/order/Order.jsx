@@ -1,11 +1,11 @@
 import { styled } from '@mui/material';
 import Button from '../../shared/UI/button/Button';
-
 import Raiting from './Raiting';
 import OrderNow from './OrderNow';
 import OrderNowSale from './OrderNowSale';
+import PropTypes from 'prop-types'; 
 
-const Order = () => {
+const Order = ({ id }) => {
   return (
     <Container>
       <StyledBox>
@@ -14,12 +14,16 @@ const Order = () => {
         <OrderNow />
 
         <OrderNowButton>
-          <ButtonStyle className="orderNowButton">ЗАКАЗАТЬ СЕЙЧАС</ButtonStyle>
+        <a href={`#${id}`}> 
+            <ButtonStyle className="orderNowButton">
+              ЗАКАЗАТЬ СЕЙЧАС
+            </ButtonStyle>
+          </a>
         </OrderNowButton>
 
         <OrderNowText>
-          <OrderNowSale/>
-     
+          <OrderNowSale />
+
           <OrderNowBottom>
             <h2>Пуско-зарядное устройство 39800 мАч — всегда готово помочь!</h2>
             <p>
@@ -91,7 +95,6 @@ export const OrderNowText = styled('div')(() => ({
   flexDirection: 'column',
 }));
 
-
 export const OrderNowBottom = styled('div')(() => ({
   width: '100%',
   maxWidth: 350,
@@ -111,3 +114,7 @@ export const OrderNowBottom = styled('div')(() => ({
     marginBottom: 15,
   },
 }));
+
+Order.propTypes = {
+  id: PropTypes.string.isRequired,
+};

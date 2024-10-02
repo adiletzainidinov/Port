@@ -2,6 +2,7 @@ import { styled } from '@mui/material';
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 import Button from '../../shared/UI/button/Button';
 import sam from '../../assets/сам-removebg-preview.png';
+import PropTypes from 'prop-types';
 
 const TechnickData = [
   {
@@ -36,7 +37,7 @@ const TechnickData = [
   },
 ];
 
-const Support = () => {
+const Support = ({ id }) => {
   return (
     <>
       <Container>
@@ -76,7 +77,9 @@ const Support = () => {
               </p>
             ))}
           </Technick>
-          <ButtonStyle>ЗАКАЗАТЬ СЕЙЧАС</ButtonStyle>
+          <a href={`#${id}`} style={{margin: '0 auto'}}>
+            <ButtonStyle>ЗАКАЗАТЬ СЕЙЧАС</ButtonStyle>
+          </a>
         </StyledBox>
       </Container>
     </>
@@ -181,3 +184,8 @@ const ButtonStyle = styled(Button)(() => ({
     fontSize: 18,
   },
 }));
+
+
+Support.propTypes = {
+  id: PropTypes.string.isRequired,
+};

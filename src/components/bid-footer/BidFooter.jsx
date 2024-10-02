@@ -1,14 +1,14 @@
 import { styled } from '@mui/material';
 import Raiting from '../order/Raiting';
 import OrderNow from '../order/OrderNow';
-
+import PropTypes from 'prop-types';
 import OrderNowSale from '../order/OrderNowSale';
 import Input from './Input';
 
-const BidFooter = () => {
+const BidFooter = ({ id }) => {
   return (
     <>
-      <Container>
+      <Container id={id}>
         <StyledBox>
           <div style={{ backgroundColor: '#f7f8f9' }}>
             <Raiting />
@@ -73,3 +73,7 @@ export const BidPapa = styled('div')(() => ({
     marginTop: 10,
   },
 }));
+
+BidFooter.propTypes = {
+  id: PropTypes.string.isRequired,
+};
