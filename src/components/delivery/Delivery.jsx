@@ -61,13 +61,19 @@ export const StyledBox = styled('div')(() => ({
   maxWidth: '480px',
   display: 'flex',
   flexDirection: 'column',
-  marginTop: 250,
+  marginTop: 290,
   backgroundColor: '#2f3339',
   height: '100%',
   minHeight: 200,
   color: 'white',
   padding: 20,
   paddingTop: 45,
+  '@media (max-width: 390px)': {
+    marginTop: 340,
+  },
+  '@media (max-width: 345px)': {
+    marginTop: 380,
+  },
 }));
 
 export const DeliveryPapa = styled('div')(() => ({
