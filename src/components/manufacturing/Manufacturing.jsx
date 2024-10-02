@@ -114,6 +114,6 @@ export const TextManifacturing = styled('div')(() => ({
   '& p': {
     lineHeight: '22px',
     textAlign: 'center',
-    marginBottom: 15,
+    marginBottom: 25,
   },
 }));

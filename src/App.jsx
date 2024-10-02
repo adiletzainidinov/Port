@@ -22,6 +22,8 @@ const App = () => {
       <Equipment />
       <Delivery/>
       <DeliveryBottom/>
+      <Header />
+
     </>
   );
 };

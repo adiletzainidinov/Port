@@ -100,15 +100,22 @@ const StyledBox = styled('div')(() => ({
   backgroundImage: `url(https://i.pinimg.com/564x/78/7b/07/787b070bbd4ad79b18652af87fd7c542.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  marginTop: 300,
+  marginTop: 330,
   '@media(max-width: 440px)': {
     height: '610px',
+    marginTop: 370,
   },
   '@media(max-width: 390px)': {
     height: '570px',
+    marginTop: 420,
   },
   '@media(max-width: 340px)': {
     height: '530px',
+    marginTop: 470,
+  },
+  '@media(max-width: 310px)': {
+    height: '530px',
+    marginTop: 510,
   },
 }));
 
