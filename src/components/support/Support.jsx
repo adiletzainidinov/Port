@@ -157,7 +157,7 @@ export const Technick = styled('div')(() => ({
   marginBottom: 30,
   '& h2': {
     textAlign: 'center',
-    marginTop: 100,
+    marginTop: 120,
     color: '#42464e',
     marginBottom: 10,
     marginLeft: 10,
