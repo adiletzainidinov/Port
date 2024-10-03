@@ -1,11 +1,11 @@
-import  { useEffect, useState } from "react";
-import { styled } from "@mui/material";
+import { useEffect, useState } from 'react';
+import { styled } from '@mui/material';
 
 const OrderNow = () => {
-  const initialDuration = 86400; 
+  const initialDuration = 86400;
   const [timeRemaining, setTimeRemaining] = useState(() => {
-    const startTime = localStorage.getItem("startTime");
-    const savedDuration = localStorage.getItem("duration");
+    const startTime = localStorage.getItem('startTime');
+    const savedDuration = localStorage.getItem('duration');
 
     if (startTime && savedDuration) {
       const elapsedTime = Math.floor((Date.now() - Number(startTime)) / 1000);
@@ -14,8 +14,8 @@ const OrderNow = () => {
       return remainingTime > 0 ? remainingTime : initialDuration;
     }
 
-    localStorage.setItem("startTime", Date.now());
-    localStorage.setItem("duration", initialDuration);
+    localStorage.setItem('startTime', Date.now());
+    localStorage.setItem('duration', initialDuration);
     return initialDuration;
   });
 
@@ -23,8 +23,8 @@ const OrderNow = () => {
     const interval = setInterval(() => {
       setTimeRemaining((prevTime) => {
         if (prevTime <= 1) {
-          localStorage.setItem("startTime", Date.now());
-          return initialDuration; 
+          localStorage.setItem('startTime', Date.now());
+          return initialDuration;
         }
         return prevTime - 1;
       });
@@ -33,8 +33,14 @@ const OrderNow = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const hours = String(Math.floor((timeRemaining % 86400) / 3600)).padStart(2, '0');
-  const minutes = String(Math.floor((timeRemaining % 3600) / 60)).padStart(2, '0');
+  const hours = String(Math.floor((timeRemaining % 86400) / 3600)).padStart(
+    2,
+    '0'
+  );
+  const minutes = String(Math.floor((timeRemaining % 3600) / 60)).padStart(
+    2,
+    '0'
+  );
   const seconds = String(timeRemaining % 60).padStart(2, '0');
 
   return (
@@ -51,7 +57,8 @@ const OrderNow = () => {
         <LineOrderNow />
         <PriceOrderNow>
           <h3>
-            <span className="many">5850 сом</span> <span className="sale">-40%</span>
+            <span className="many">5850 сом</span>{' '}
+            <span className="sale">-40%</span>
           </h3>
           <p>
             3500 <span>сом</span>
@@ -109,8 +116,9 @@ export const Promotion = styled('div')(() => ({
       marginLeft: 5,
     },
   },
-  '@media (max-width: 340px)': {
+  '@media (max-width: 400px)': {
     maxWidth: 156,
+    paddingBottom: 10,
     '& h2': {
       fontSize: 14,
     },
@@ -150,7 +158,7 @@ export const PriceOrderNow = styled('div')(() => ({
     fontSize: 30,
     marginTop: 2,
   },
-  '@media (max-width: 340px)': {
+  '@media (max-width: 400px)': {
     '& h3': {
       fontSize: 17,
       '& .sale': {

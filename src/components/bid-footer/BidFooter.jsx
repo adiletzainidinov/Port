@@ -10,7 +10,7 @@ const BidFooter = ({ id }) => {
     <>
       <Container id={id}>
         <StyledBox>
-          <div style={{ backgroundColor: '#f7f8f9' }}>
+          <div style={{ backgroundColor: '#f7f8f9', marginTop: 30 }}>
             <Raiting />
           </div>
           <BidPapa>
