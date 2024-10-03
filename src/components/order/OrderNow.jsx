@@ -122,7 +122,7 @@ export const Promotion = styled('div')(() => ({
   },
   '@media (max-width: 340px)': {
     width: '100%',
-    maxWidth: '151px',
+    maxWidth: '171px',
     '& h2': {
       fontSize: 14,
     },
