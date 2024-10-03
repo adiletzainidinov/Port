@@ -88,7 +88,7 @@ export const OrderNowForWidth = styled('div')(() => ({
 
 export const Promotion = styled('div')(() => ({
   width: '100%',
-  maxWidth: 181,
+  maxWidth: 191,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -116,13 +116,13 @@ export const Promotion = styled('div')(() => ({
       marginLeft: 5,
     },
   },
-  // '@media (max-width: 400px)': {
-  //   width: '100%',
-  //   maxWidth: 171,
-  // },
+  '@media (max-width: 400px)': {
+    width: '100%',
+    maxWidth: 184,
+  },
   '@media (max-width: 340px)': {
     width: '100%',
-    maxWidth: '141px',
+    maxWidth: '151px',
     '& h2': {
       fontSize: 14,
     },
