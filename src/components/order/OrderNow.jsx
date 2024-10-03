@@ -116,7 +116,7 @@ export const Promotion = styled('div')(() => ({
       marginLeft: 5,
     },
   },
-  '@media (max-width: 410px)': {
+  '@media (max-width: 450px)': {
     maxWidth: 156,
     paddingBottom: 10,
     '& h2': {
@@ -158,7 +158,7 @@ export const PriceOrderNow = styled('div')(() => ({
     fontSize: 30,
     marginTop: 2,
   },
-  '@media (max-width: 410px)': {
+  '@media (max-width: 450px)': {
     '& h3': {
       fontSize: 17,
       '& .sale': {
