@@ -1,5 +1,6 @@
 import { Modal, styled, TextField } from '@mui/material';
 import {
+  CHARTERDATA,
   forReturningAndExchangingGoodsData,
   userAgreementData,
   websitePrivacyPolicyData,
@@ -18,6 +19,7 @@ const Footer = () => {
     isForReturningAndExchangingGoodsData,
     setIsForReturningAndExchangingGoodsData,
   ] = useState(false);
+  const [charter, setCharter] = useState(false);
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
 
@@ -30,6 +32,9 @@ const Footer = () => {
   };
   const handleisForReturningAndExchangingGoods = () => {
     setIsForReturningAndExchangingGoodsData((p) => !p);
+  };
+  const handleCharter = () => {
+    setCharter((p) => !p);
   };
 
   const handleOpen = () => {
@@ -70,12 +75,14 @@ const Footer = () => {
         <p onClick={handleisForReturningAndExchangingGoods}>
           Условия возврата и обмена товара
         </p>
+        <p onClick={handleCharter}>Внимание фото и видео рекламные</p>
         <p onClick={handleOpen}>Админ</p>
         {isWebsitePrivacyPolicy && <h4>{websitePrivacyPolicyData}</h4>}
         {isUserAgreementData && <h4>{userAgreementData}</h4>}
         {isForReturningAndExchangingGoodsData && (
           <h4>{forReturningAndExchangingGoodsData}</h4>
         )}
+        {charter && <h4>{CHARTERDATA}</h4>}
         <Modal open={open} onClose={handleClose}>
           <ModalContent onSubmit={handleSubmit}>
             <h3>Админ</h3>
