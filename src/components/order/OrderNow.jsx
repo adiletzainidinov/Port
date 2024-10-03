@@ -116,6 +116,16 @@ export const Promotion = styled('div')(() => ({
       marginLeft: 5,
     },
   },
+  '@media (max-width: 380px)': {
+    maxWidth: 181,
+    paddingBottom: 10,
+    '& h2': {
+      fontSize: 14,
+    },
+    '& p': {
+      fontSize: 20,
+    },
+  },
   '@media (max-width: 340px)': {
     maxWidth: 161,
     paddingBottom: 10,
