@@ -137,7 +137,7 @@ export const BacgroundUrl = styled('div')(() => ({
   width: '100%',
   maxWidth: '480px',
   backgroundImage:
-    'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtnh7pgJUtpZWWtHn-eVA3n1DY6D6WpnGOdA&s)',
+    'url(https://www.autocentre.ua/wp-content/uploads/2021/06/4er-vergleich-honda-civic-audi-a3-hyundai-i30-ford-focus-1200x800-fd41a643135185fb-871x572-c-default.jpg)',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '100%',
