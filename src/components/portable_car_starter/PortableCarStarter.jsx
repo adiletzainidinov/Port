@@ -111,6 +111,7 @@ export const ImgStarter = styled('div')(() => ({
     width: '100%',
     maxWidth: 200,
     borderRadius: 30,
+    marginBottom: 20,
   },
   '& .phone': {
     marginLeft: 20,
