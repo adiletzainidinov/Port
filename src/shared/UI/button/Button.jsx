@@ -19,9 +19,13 @@ Button.propTypes = {
 
 const MuiButtonStyle = styled(MuiButton)(() => ({
   padding: '15px 40px',
-  background: 'linear-gradient(360deg, #f5c179, #ff6600)', 
+  background: 'linear-gradient(360deg, #f5c179, #ff6600)',
   color: 'white',
   fontSize: '22px',
   borderRadius: '7px',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  transition: 'background-color 0.3s, transform 0.3s',
+  '&:hover': {
+    transform: 'scale(1.05)',
+  },
 }));

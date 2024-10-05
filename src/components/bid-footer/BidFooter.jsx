@@ -6,6 +6,9 @@ import OrderNowSale from '../order/OrderNowSale';
 import Input from './Input';
 
 const BidFooter = ({ id }) => {
+  const phoneNumber = '+996998083828';
+  const message = encodeURIComponent('Здравствуйте! Я хочу купить пусковое устройство для автомобиля.');
+
   return (
     <>
       <Container id={id}>
@@ -23,6 +26,16 @@ const BidFooter = ({ id }) => {
           </BidPapa>
           <OrderNow />
           <Input />
+          <StyledHeading style={{ textAlign: 'center', fontSize: '44px' }}>
+            ИЛИ
+          </StyledHeading>
+          <StyledWhatsAppButton 
+            href={`https://wa.me/${phoneNumber}?text=${message}`} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            НАПИШИТЕ НА WhatsApp
+          </StyledWhatsAppButton>
           <OrderNowSale />
         </StyledBox>
       </Container>
@@ -71,6 +84,32 @@ export const BidPapa = styled('div')(() => ({
     backgroundColor: '#bbbdbf',
     margin: '0 auto',
     marginTop: 10,
+  },
+}));
+
+const StyledHeading = styled('h2')(({ theme }) => ({
+  textAlign: 'center',
+  fontSize: '44px',
+  margin: '20px 0',
+  fontWeight: 'bold',
+  color: theme.palette.primary.main,
+}));
+
+const StyledWhatsAppButton = styled('a')(() => ({
+  display: 'inline-block',
+  background: 'linear-gradient(360deg, #6a9e80, #2fbf7a)',
+  color: 'white',
+  padding: '12px 24px',
+  fontSize: '18px',
+  borderRadius: '8px',
+  textTransform: 'none',
+  transition: 'background-color 0.3s, transform 0.3s',
+  marginBottom: 30,
+  textDecoration: 'none',
+  textAlign: 'center',
+  '&:hover': {
+    backgroundColor: '#333',
+    transform: 'scale(1.05)',
   },
 }));
 
