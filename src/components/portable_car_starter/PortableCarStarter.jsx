@@ -57,7 +57,7 @@ export const TopCardContent = styled('div')(() => ({
   backgroundColor: '#fafee8',
   margin: '0 auto',
   height: '100%',
-  maxHeight: 350,
+  maxHeight: 380,
   padding: '10px 20px',
   paddingBottom: 0,
   borderTopRightRadius: 10,
@@ -107,11 +107,11 @@ export const StarterText = styled('div')(() => ({
 export const ImgStarter = styled('div')(() => ({
   display: 'flex',
   justifyContent: 'center',
+  marginBottom: 30,
   '& img': {
     width: '100%',
     maxWidth: 200,
     borderRadius: 30,
-    marginBottom: 20,
   },
   '& .phone': {
     marginLeft: 20,
