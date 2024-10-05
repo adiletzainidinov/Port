@@ -82,7 +82,7 @@ export const StyledBox = styled('div')(() => ({
   backgroundImage: `url(https://i.pinimg.com/564x/b9/32/b5/b932b5e575763162f8d7893017e45e5b.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  marginTop: 500,
+  marginTop: 520,
   '@media(max-width: 410px)': {
     height: '1410px',
     marginTop: 520,
