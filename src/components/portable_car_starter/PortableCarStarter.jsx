@@ -137,7 +137,7 @@ export const BacgroundUrl = styled('div')(() => ({
   width: '100%',
   maxWidth: '480px',
   backgroundImage:
-    'url(https://www.carandbike.com/_next/image?url=http%3A%2F%2Fi.ndtvimg.com%2Fi%2F2016-08%2Ftypes-of-cars_827x510_71472130209.jpg&w=640&q=75)',
+    'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtnh7pgJUtpZWWtHn-eVA3n1DY6D6WpnGOdA&s)',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '100%',
