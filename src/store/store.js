@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
 });
 
 const persistConfig = {
-  key: 'UMRA',
+  key: 'portative',
   storage,
 };
 

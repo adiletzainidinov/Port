@@ -1,40 +1,54 @@
-import  { useEffect, useState } from "react";
-import { styled } from "@mui/material";
+import { useEffect, useState } from 'react';
+import { styled } from '@mui/material';
 
 const OrderNow = () => {
-  const initialDuration = 86400; 
+  const initialDuration = 86400;
   const [timeRemaining, setTimeRemaining] = useState(() => {
-    const startTime = localStorage.getItem("startTime");
-    const savedDuration = localStorage.getItem("duration");
+    const startTime = localStorage.getItem('startTime');
+    const savedDuration = localStorage.getItem('duration');
 
     if (startTime && savedDuration) {
       const elapsedTime = Math.floor((Date.now() - Number(startTime)) / 1000);
       const remainingTime = savedDuration - elapsedTime;
 
-      return remainingTime > 0 ? remainingTime : initialDuration;
+      console.log('Elapsed Time: ', elapsedTime); // Для отладки
+      console.log('Remaining Time: ', remainingTime); // Для отладки
+
+      return remainingTime > 0 ? remainingTime : 0; // Если время истекло, возвращаем 0
     }
 
-    localStorage.setItem("startTime", Date.now());
-    localStorage.setItem("duration", initialDuration);
-    return initialDuration;
+    // Устанавливаем начальные значения в localStorage
+    console.log('Setting initial values in localStorage.'); // Для отладки
+    localStorage.setItem('startTime', Date.now());
+    localStorage.setItem('duration', initialDuration);
+    return initialDuration; // Возвращаем начальную продолжительность
   });
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeRemaining((prevTime) => {
         if (prevTime <= 1) {
-          localStorage.setItem("startTime", Date.now());
-          return initialDuration; 
+          // Таймер закончился
+          console.log('Timer finished, resetting.'); // Для отладки
+          localStorage.removeItem('startTime');
+          localStorage.removeItem('duration');
+          return 0; // Вернём 0, так как таймер закончился
         }
-        return prevTime - 1;
+        return prevTime - 1; // Уменьшаем оставшееся время
       });
     }, 1000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // Очистка интервала при размонтировании
   }, []);
 
-  const hours = String(Math.floor((timeRemaining % 86400) / 3600)).padStart(2, '0');
-  const minutes = String(Math.floor((timeRemaining % 3600) / 60)).padStart(2, '0');
+  const hours = String(Math.floor((timeRemaining % 86400) / 3600)).padStart(
+    2,
+    '0'
+  );
+  const minutes = String(Math.floor((timeRemaining % 3600) / 60)).padStart(
+    2,
+    '0'
+  );
   const seconds = String(timeRemaining % 60).padStart(2, '0');
 
   return (
@@ -51,7 +65,8 @@ const OrderNow = () => {
         <LineOrderNow />
         <PriceOrderNow>
           <h3>
-            <span className="many">5850 сом</span> <span className="sale">-40%</span>
+            <span className="many">5850 сом</span>{' '}
+            <span className="sale">-40%</span>
           </h3>
           <p>
             3500 <span>сом</span>
