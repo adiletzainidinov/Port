@@ -61,7 +61,7 @@ export const StyledBox = styled('div')(() => ({
   maxWidth: '480px',
   display: 'flex',
   flexDirection: 'column',
-  marginTop: 310,
+  marginTop: 330,
   backgroundColor: '#2f3339',
   height: '100%',
   minHeight: 200,

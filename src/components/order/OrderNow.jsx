@@ -11,34 +11,32 @@ const OrderNow = () => {
       const elapsedTime = Math.floor((Date.now() - Number(startTime)) / 1000);
       const remainingTime = savedDuration - elapsedTime;
 
-      console.log('Elapsed Time: ', elapsedTime); // Для отладки
-      console.log('Remaining Time: ', remainingTime); // Для отладки
+      console.log('Elapsed Time: ', elapsedTime); 
+      console.log('Remaining Time: ', remainingTime); 
 
-      return remainingTime > 0 ? remainingTime : 0; // Если время истекло, возвращаем 0
+      return remainingTime > 0 ? remainingTime : 0; 
     }
 
-    // Устанавливаем начальные значения в localStorage
-    console.log('Setting initial values in localStorage.'); // Для отладки
+    console.log('Setting initial values in localStorage.'); 
     localStorage.setItem('startTime', Date.now());
     localStorage.setItem('duration', initialDuration);
-    return initialDuration; // Возвращаем начальную продолжительность
+    return initialDuration; 
   });
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeRemaining((prevTime) => {
         if (prevTime <= 1) {
-          // Таймер закончился
-          console.log('Timer finished, resetting.'); // Для отладки
+          console.log('Timer finished, resetting.'); 
           localStorage.removeItem('startTime');
           localStorage.removeItem('duration');
-          return 0; // Вернём 0, так как таймер закончился
+          return 0; 
         }
-        return prevTime - 1; // Уменьшаем оставшееся время
+        return prevTime - 1; 
       });
     }, 1000);
 
-    return () => clearInterval(interval); // Очистка интервала при размонтировании
+    return () => clearInterval(interval); 
   }, []);
 
   const hours = String(Math.floor((timeRemaining % 86400) / 3600)).padStart(
