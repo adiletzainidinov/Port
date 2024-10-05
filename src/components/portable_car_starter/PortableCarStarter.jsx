@@ -140,7 +140,10 @@ export const BacgroundUrl = styled('div')(() => ({
     'url(https://www.carandbike.com/_next/image?url=http%3A%2F%2Fi.ndtvimg.com%2Fi%2F2016-08%2Ftypes-of-cars_827x510_71472130209.jpg&w=640&q=75)',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  height: '250px',
+  height: '100%',
+  minHeight: '250px',
   borderBottomRightRadius: 10,
   borderBottomLeftRadius: 10,
 }));
+
+// https://www.carandbike.com/_next/image?url=http%3A%2F%2Fi.ndtvimg.com%2Fi%2F2016-08%2Ftypes-of-cars_827x510_71472130209.jpg&w=640&q=75
